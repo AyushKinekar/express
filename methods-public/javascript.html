@@ -63,6 +63,7 @@
       const btn = document.querySelector('.submit-btn')
       const input = document.querySelector('.form-input')
       const formAlert = document.querySelector('.form-alert')
+      console.log(formAlert);
       btn.addEventListener('click', async (e) => {
         e.preventDefault()
         const nameValue = input.value
@@ -74,7 +75,7 @@
           result.appendChild(h5)
         } catch (error) {
           // console.log(error.response)
-          formAlert.textContent = error.response.data.msg
+          formAlert.textContent = error.response.data.mesg
         }
         input.value = ''
       })
